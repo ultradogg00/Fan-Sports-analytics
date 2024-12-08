@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { AuthContextProvider, useUserAuth } from "./_utils/auth-context";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -18,15 +19,20 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
-    <html lang="en">
+    <html lang="en"  className="bg-mainGrey">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-mainGrey`}
       >
         <div className="ml-4 p-3 mb-20">
             <h1 className=" text-3xl">Fanlaltics</h1>
+           
         </div>
-        {children}
+        <AuthContextProvider>{children}</AuthContextProvider>
+        <footer className=" flex justify-center  text-gray-900">
+          <p>Made by Github:ultradogg00</p>
+        </footer>
       </body>
     </html>
   );

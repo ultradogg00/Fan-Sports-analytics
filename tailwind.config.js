@@ -12,8 +12,9 @@ module.exports = {
         foreground: "var(--foreground)",
         mainGrey: '#868689',
         secondaryColor: '#E3E1D9',
+        thirdColor: '#C7C8CC',
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };

@@ -26,7 +26,7 @@ export default function ArticlesDisplay() {
         console.log(`HTTP error! status: ${response.status}`);
       }
       const result = await response.json();
-      console.dir(result)
+      
       setArticleList(result);
     } catch (error) {
       console.error(error);
@@ -38,10 +38,10 @@ export default function ArticlesDisplay() {
     GetNews();
   }, []);
   
-  console.log(articleList);
+  
 
   return (
-    <div className="bg-secondaryColor text-center w-2/3 p-4 ml-20 rounded-md">
+    <div className="bg-secondaryColor text-center w-1/4 p-4 ml-20 rounded-md">
       <h2 className="text-lg underline flex justify-center " > Current News <FaRegNewspaper className="ml-2 mt-1 "/>  </h2>
 
       {articleList.length === 0 ? (
@@ -63,7 +63,7 @@ function Article({articleObj}) {
   } = articleObj;
   source =  source.charAt(0).toUpperCase() + source.slice(1);
   source = source.replace(/_/g, " ");
-  console.dir(url);
+ 
   return (
     <div className=" p-2 border-b-2 border-black">
       <h3 >{title}</h3>
