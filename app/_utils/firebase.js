@@ -7,12 +7,12 @@ import {getFirestore} from "firebase/firestore"
  
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBpg-eT-Gyk9XETiDeVv6le0WNIPKOZi9w",
-  authDomain: "fan-sports-analytics.firebaseapp.com",
-  projectId: "fan-sports-analytics",
-  storageBucket: "fan-sports-analytics.firebasestorage.app",
-  messagingSenderId: "1012525724891",
-  appId: "1:1012525724891:web:232d8fc6d12a5530f288fe"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
  
 // Initialize Firebase
