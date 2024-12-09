@@ -15,7 +15,7 @@ export default function GamesList() {
   let selectedDate = date.add(1,'day');
   async function getGames() {
    
-    const apiKey = process.env.NEXT_PUBLIC_X_RAPIDAPI_KEY;
+    const apiKey = '2d1a9416acmsh2a2be4e43ca246cp13a874jsn5e750ad92317';
     const url = `https://api-nba-v1.p.rapidapi.com/games?date=${selectedDate.format('YYYY-MM-DD')}`;
     const options = {
 	method: 'GET',

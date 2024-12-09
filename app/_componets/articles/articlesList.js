@@ -8,7 +8,7 @@ export default function ArticlesDisplay() {
   const [articleList, setArticleList] = useState([]);
 
   async function GetNews() {
-    const apiKey = process.env.NEXT_PUBLIC_X_RAPIDAPI_KEY;
+    const apiKey = '2d1a9416acmsh2a2be4e43ca246cp13a874jsn5e750ad92317';
 
     const url =
       'https://nba-latest-news.p.rapidapi.com/articles?limit=8';
