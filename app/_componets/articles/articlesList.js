@@ -11,7 +11,7 @@ export default function ArticlesDisplay() {
     const apiKey = process.env.NEXT_PUBLIC_X_RAPIDAPI_KEY;
 
     const url =
-      'https://nba-latest-news.p.rapidapi.com/articles?limit=10';
+      'https://nba-latest-news.p.rapidapi.com/articles?limit=8';
     const options = {
       method: "GET",
       headers: {
@@ -41,7 +41,7 @@ export default function ArticlesDisplay() {
   
 
   return (
-    <div className="bg-secondaryColor text-center w-1/4 p-4 ml-20 rounded-md">
+    <div className="bg-secondaryColor text-center w-1/4 p-4 ml-10 rounded-md">
       <h2 className="text-lg underline flex justify-center " > Current News <FaRegNewspaper className="ml-2 mt-1 "/>  </h2>
 
       {articleList.length === 0 ? (
